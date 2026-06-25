@@ -78,6 +78,22 @@ To succeed remotely, your technical skills are not enough. You must master the "
 3. **Showcase Autonomy:** Provide examples of projects where you took full ownership from end-to-end without needing constant micro-management.
 4. **Internet Speed:** Always have a backup internet connection (e.g., 5G Hotspot) ready in case your home Wi-Fi drops during a live coding interview.
 
+## 📝 The "Perfect" Remote Tech Resume (Το Ιδανικό Βιογραφικό)
+When applying globally, your resume must be optimized for Applicant Tracking Systems (ATS) and remote hiring managers:
+- **Location Status:** Clearly state "Remote" or your exact Time Zone (e.g., "Athens, Greece (CET)") under your name.
+- **Link Your Work:** Include clickable links to your GitHub, Portfolio, and LinkedIn. Remote employers care more about your public code than your degree.
+- **Highlight Remote Experience:** If you have worked remotely before or collaborated with international teams across time zones, make it a bullet point in your experience section!
+
+## ⚖️ Navigating Taxes & Contracts (Φορολογία & Συμβάσεις)
+Working for a company abroad often means you will be hired as an Independent Contractor (B2B):
+- **Employer of Record (EoR):** Many companies now use services like **Deel**, **Remote.com**, or **OysterHR**. These services hire you locally on behalf of the foreign company, meaning you get a standard Greek/local employment contract with full health insurance and pension.
+- **Freelance/B2B (Μπλοκάκι):** If you are hired directly as a contractor, you are responsible for your own taxes. You invoice the company monthly. Always consult a local tax advisor (Λογιστή) to understand VAT (ΦΠΑ) exemptions for intra-community/third-country services.
+
+## 🚀 Onboarding Remotely (Επιβίωση τις πρώτες 30 μέρες)
+- **Over-communicate:** In a physical office, people see you working. Remotely, if you don't speak, you don't exist. Give daily brief updates on Slack.
+- **Document Everything:** If you ask a senior developer a question on a call and they solve it, write it down in the company's internal Wiki (Notion/Confluence). You will be praised for building institutional knowledge.
+- **Set 1-on-1s:** Proactively schedule 15-minute "coffee chats" with your team members in your first two weeks. Building rapport remotely requires deliberate effort.
+
 ## 🎯 Top 40+ Platforms for Remote Tech Jobs (Η Απόλυτη Λίστα)
 
 If you are looking for remote jobs in Data Science, Engineering, or Software Development, here is the ultimate, enriched list of platforms you should check. We categorized them based on what you are looking for:
