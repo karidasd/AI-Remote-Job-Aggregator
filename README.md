@@ -63,7 +63,7 @@ Welcome to the comprehensive guide on finding and securing remote work in the te
 - **Time Zone Differences (Διαφορές Ώρας):** Working with a team in PST while you are in CET can lead to late-night meetings.
 - **Self-Discipline (Αυτοπειθαρχία):** You must be highly organized and proactive in communicating your progress.
 
-## 🎯 Top 30+ Platforms for Remote Tech Jobs (Η Απόλυτη Λίστα)
+## 🎯 Top 40+ Platforms for Remote Tech Jobs (Η Απόλυτη Λίστα)
 
 If you are looking for remote jobs in Data Science, Engineering, or Software Development, here is the ultimate, enriched list of platforms you should check. We categorized them based on what you are looking for:
 
@@ -73,41 +73,52 @@ If you are looking for remote jobs in Data Science, Engineering, or Software Dev
 3. **[Remotive](https://remotive.com/)**: *Best for Tech Focus.* Great filtering, specifically tailored for software developers and data professionals.
 4. **[FlexJobs](https://www.flexjobs.com/)**: *Best for Scam-Free Search.* Hand-screened remote jobs. It requires a subscription, but guarantees zero spam or fake listings.
 5. **[LinkedIn](https://www.linkedin.com/jobs/)**: *Best for Networking.* Set location to "Worldwide" and select the "Remote" filter. Applying via LinkedIn Easy Apply while messaging the recruiter is a powerful tactic.
+6. **[Dynamite Jobs](https://dynamitejobs.com/)**: *Best for Quality.* Every job is 100% remote and manually vetted by their team.
 
 ### 🧠 Vetted Freelance & Top Tier (Για Senior / Έμπειρους)
-6. **[Toptal](https://www.toptal.com/)**: *Best for $100+/hr Rates.* "Top 3%" vetted network. You must pass rigorous algorithms and interviews, but once in, you get matched with top Silicon Valley clients.
-7. **[Turing](https://www.turing.com/)**: *Best for AI Matching.* Similar to Toptal, heavily focused on matching vetted developers with US companies for long-term remote contracts.
-8. **[Arc.dev](https://arc.dev/)**: *Best for Full-Time Remote.* Specifically designed to help remote developers find full-time salaried roles, not just freelance gigs.
-9. **[Gun.io](https://www.gun.io/)**: *Best for Elite Freelancers.* Premium platform connecting highly skilled devs with great companies. Very high standards.
-10. **[Braintrust](https://www.usebraintrust.com/)**: *Best for Web3 Ethos.* A decentralized, user-owned talent network where you keep 100% of your earnings.
+7. **[Toptal](https://www.toptal.com/)**: *Best for $100+/hr Rates.* "Top 3%" vetted network. You must pass rigorous algorithms and interviews, but once in, you get matched with top Silicon Valley clients.
+8. **[Turing](https://www.turing.com/)**: *Best for AI Matching.* Similar to Toptal, heavily focused on matching vetted developers with US companies for long-term remote contracts.
+9. **[Arc.dev](https://arc.dev/)**: *Best for Full-Time Remote.* Specifically designed to help remote developers find full-time salaried roles, not just freelance gigs.
+10. **[Gun.io](https://www.gun.io/)**: *Best for Elite Freelancers.* Premium platform connecting highly skilled devs with great companies. Very high standards.
+11. **[Braintrust](https://www.usebraintrust.com/)**: *Best for Web3 Ethos.* A decentralized, user-owned talent network where you keep 100% of your earnings.
+12. **[Crossover](https://www.crossover.com/)**: *Best for High-Pay / High-Intensity.* Offers $100k+ roles, but requires passing extreme cognitive and technical tests.
+13. **[X-Team](https://x-team.com/)**: *Best for Developer Community.* Join an exclusive community of developers working for massive brands like Riot Games.
+14. **[Clevertech](https://www.clevertech.biz/)**: *Best for Premium Tech Culture.* Highly sought-after remote tech roles with excellent benefits.
 
 ### 🚀 Startups & Tech Specific (Για Καινοτόμες Εταιρείες)
-11. **[Wellfound (AngelList)](https://wellfound.com/)**: *Best for Startups & Equity.* The absolute best place to find remote jobs at early-stage startups where you can negotiate stock options.
-12. **[Otta](https://otta.com/)**: *Best for Modern Tech.* Highly curated jobs at fast-growing, trendy tech companies. Has the best user interface for job seekers.
-13. **[Y Combinator (Work at a Startup)](https://www.workatastartup.com/)**: *Best for YC Companies.* Find remote roles directly in startups backed by the most famous accelerator in the world.
-14. **[Built In](https://builtin.com/jobs/remote)**: *Best for US Hubs.* Originally focused on local hubs (Built In NYC, Built In Austin), now features a massive "Remote" section for tech roles.
-15. **[Dice](https://www.dice.com/)**: *Best for Traditional IT.* The classic tech job board. Excellent if you are looking for enterprise Data Engineering or Cloud roles.
+15. **[Wellfound (AngelList)](https://wellfound.com/)**: *Best for Startups & Equity.* The absolute best place to find remote jobs at early-stage startups where you can negotiate stock options.
+16. **[Otta](https://otta.com/)**: *Best for Modern Tech.* Highly curated jobs at fast-growing, trendy tech companies. Has the best user interface for job seekers.
+17. **[Y Combinator (Work at a Startup)](https://www.workatastartup.com/)**: *Best for YC Companies.* Find remote roles directly in startups backed by the most famous accelerator in the world.
+18. **[Built In](https://builtin.com/jobs/remote)**: *Best for US Hubs.* Originally focused on local hubs (Built In NYC, Built In Austin), now features a massive "Remote" section for tech roles.
+19. **[Dice](https://www.dice.com/)**: *Best for Traditional IT.* The classic tech job board. Excellent if you are looking for enterprise Data Engineering or Cloud roles.
+20. **[The Muse](https://www.themuse.com/search/remote)**: *Best for Culture Insights.* Shows detailed company profiles and culture videos alongside job postings.
 
 ### 🌐 Hidden Gems & Aggregators (Εργαλεία Συλλογής)
-16. **[Working Nomads](https://www.workingnomads.com/jobs)**: *Best for Digital Nomads.* Curated list sent via newsletter.
-17. **[JustRemote](https://justremote.co/)**: *Best for Hidden Jobs.* Uncovers jobs that aren't advertised on the major job boards.
-18. **[Remote.co](https://remote.co/)**: *Best for Diversity.* Cultivated list by the FlexJobs team, covering many non-tech roles too.
-19. **[Himalayas](https://himalayas.app/)**: *Best for Company Insights.* Beautiful UI, provides deep data on the tech stack and culture of the hiring companies.
-20. **[Jobspresso](https://jobspresso.co/)**: *Best for Curation.* Expertly curated remote jobs in tech, marketing, etc.
-21. **[DailyRemote](https://dailyremote.com/)**: *Best for Daily Updates.* Consistently updated with fresh listings.
-22. **[NoDesk](https://nodesk.co/)**: *Best for Nomad Resources.* Besides jobs, it offers great articles on remote life and taxes.
-23. **[Pangian](https://pangian.com/)**: *Best for Global Community.* A global community network with a solid job board.
-24. **[SkipTheDrive](https://www.skipthedrive.com/)**: *Best for Free Searching.* A completely free remote job search engine.
-25. **[Remote Leaf](https://remoteleaf.com/)**: *Best for Personalized Alerts.* Aggregates jobs from everywhere and sends them to your inbox.
+21. **[Working Nomads](https://www.workingnomads.com/jobs)**: *Best for Digital Nomads.* Curated list sent via newsletter.
+22. **[JustRemote](https://justremote.co/)**: *Best for Hidden Jobs.* Uncovers jobs that aren't advertised on the major job boards.
+23. **[Remote.co](https://remote.co/)**: *Best for Diversity.* Cultivated list by the FlexJobs team, covering many non-tech roles too.
+24. **[Himalayas](https://himalayas.app/)**: *Best for Company Insights.* Beautiful UI, provides deep data on the tech stack and culture of the hiring companies.
+25. **[Jobspresso](https://jobspresso.co/)**: *Best for Curation.* Expertly curated remote jobs in tech, marketing, etc.
+26. **[DailyRemote](https://dailyremote.com/)**: *Best for Daily Updates.* Consistently updated with fresh listings.
+27. **[NoDesk](https://nodesk.co/)**: *Best for Nomad Resources.* Besides jobs, it offers great articles on remote life and taxes.
+28. **[Pangian](https://pangian.com/)**: *Best for Global Community.* A global community network with a solid job board.
+29. **[SkipTheDrive](https://www.skipthedrive.com/)**: *Best for Free Searching.* A completely free remote job search engine.
+30. **[Remote Leaf](https://remoteleaf.com/)**: *Best for Personalized Alerts.* Aggregates jobs from everywhere and sends them to your inbox.
 
 ### ⛓️ Niche (Web3, Freelance, Specific Tech)
-26. **[Upwork](https://www.upwork.com/)**: *Best for Quick Gigs.* The biggest general freelance platform. Great for building a portfolio.
-27. **[Fiverr](https://www.fiverr.com/)**: *Best for Productized Services.* Sell your skills as a product (e.g., "I will build an ETL pipeline for $500").
-28. **[Freelancer](https://www.freelancer.com/)**: *Best for Global Competition.* Massive global freelance marketplace.
-29. **[Web3 Jobs](https://web3.career/)**: *Best for Blockchain.* The go-to place for Blockchain, Solidity, and Web3 Data roles.
-30. **[Crypto Jobs List](https://cryptojobslist.com/)**: *Best for Crypto.* The #1 site for remote jobs in the cryptocurrency space.
-31. **[Python.org Jobs](https://www.python.org/jobs/)**: *Best for Pythonistas.* Official Python job board (many remote listings).
-32. **[RubyNow](https://rubynow.com/)**: *Best for Ruby Devs.* Dedicated entirely to Ruby/Rails developers.
+31. **[Upwork](https://www.upwork.com/)**: *Best for Quick Gigs.* The biggest general freelance platform. Great for building a portfolio.
+32. **[Fiverr](https://www.fiverr.com/)**: *Best for Productized Services.* Sell your skills as a product (e.g., "I will build an ETL pipeline for $500").
+33. **[Freelancer](https://www.freelancer.com/)**: *Best for Global Competition.* Massive global freelance marketplace.
+34. **[PeoplePerHour](https://www.peopleperhour.com/)**: *Best for European Market.* A solid alternative to Upwork, highly popular in the UK/EU.
+35. **[Guru](https://www.guru.com/)**: *Best for Enterprise Freelance.* Great for longer-term B2B freelance contracts.
+36. **[Codeable](https://codeable.io/)**: *Best for WordPress Experts.* Vetted freelance platform exclusively for WP developers.
+37. **[Authentic Jobs](https://authenticjobs.com/)**: *Best for Designers & Frontend.* A premium board for web professionals.
+38. **[Dribbble Jobs](https://dribbble.com/jobs)**: *Best for UI/UX & Graphic Designers.* The top spot for remote design roles.
+39. **[Topcoder](https://www.topcoder.com/)**: *Best for Competitive Coding.* Win challenges to get paid and get hired.
+40. **[Web3 Jobs](https://web3.career/)**: *Best for Blockchain.* The go-to place for Blockchain, Solidity, and Web3 Data roles.
+41. **[Crypto Jobs List](https://cryptojobslist.com/)**: *Best for Crypto.* The #1 site for remote jobs in the cryptocurrency space.
+42. **[Python.org Jobs](https://www.python.org/jobs/)**: *Best for Pythonistas.* Official Python job board (many remote listings).
+43. **[RubyNow](https://rubynow.com/)**: *Best for Ruby Devs.* Dedicated entirely to Ruby/Rails developers.
 
 > **Pro Tip:** When applying for remote roles, emphasize your **asynchronous communication skills**, your ability to work autonomously, and your experience with tools like Slack, Jira, and GitHub in your Cover Letter!
 
