@@ -91,19 +91,6 @@ with tab1:
         top_skills = skill_counts.head(20)
         
         fig = px.bar(top_skills, x='Demand', y='Skill', orientation='h', 
-                     color='Demand', color_continuous_scale="Agalnith",
-                     title="Top 20 Most Requested Tech Skills")
-        fig.update_layout(yaxis={'categoryorder':'total ascending'}, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-        st.plotly_chart(fig, use_container_width=True)
-        
-    with c2:
-        # Treemap for visual flair
-        fig2 = px.treemap(top_skills.head(10), path=['Skill'], values='Demand', 
-                          color='Demand', color_continuous_scale="Blues",
-                          title="Skill Weight Matrix")
-        st.plotly_chart(fig2, use_container_width=True)
-
-with tab2:
     st.subheader("Deep Job Filtering")
     # Filters
     col_search1, col_search2 = st.columns(2)
@@ -113,31 +100,32 @@ with tab2:
         source_options = jobs_df['source'].unique().tolist() if 'source' in jobs_df.columns else []
         selected_sources = st.multiselect("Filter by Source:", options=source_options, default=source_options)
         
+    skill_counts = skills_df['skill'].value_counts().reset_index()
+    skill_counts.columns = ['Skill', 'Count']
     selected_skills = st.multiselect("Filter by Skills Required:", options=skill_counts['Skill'].tolist())
     
-    # Merge and filter logic
-    skills_grouped = skills_df.groupby('job_id')['skill'].apply(lambda x: ', '.join(x)).reset_index()
-    display_df = pd.merge(jobs_df, skills_grouped, on='job_id', how='left')
-    display_df['skill'] = display_df['skill'].fillna('')
+    # Filter logic
+    filtered_df = display_df.copy()
     
     if search_term:
-        display_df = display_df[display_df['title'].str.contains(search_term, case=False, na=False) | 
-                                display_df['company'].str.contains(search_term, case=False, na=False)]
+        filtered_df = filtered_df[filtered_df['title'].str.contains(search_term, case=False, na=False) | 
+                                filtered_df['company'].str.contains(search_term, case=False, na=False)]
         
     if selected_skills:
         for sk in selected_skills:
-            display_df = display_df[display_df['skill'].str.contains(sk, case=False, na=False)]
+            filtered_df = filtered_df[filtered_df['skill'].str.contains(sk, case=False, na=False)]
             
-    if selected_sources and 'source' in display_df.columns:
-        display_df = display_df[display_df['source'].isin(selected_sources)]
+    if selected_sources and 'source' in filtered_df.columns:
+        filtered_df = filtered_df[filtered_df['source'].isin(selected_sources)]
             
     # Premium DataFrame Display
     st.dataframe(
-        display_df[['title', 'company', 'source', 'skill', 'published_at', 'url']].sort_values('published_at', ascending=False),
+        filtered_df[['title', 'company', 'source', 'salary', 'skill', 'published_at', 'url']].sort_values('published_at', ascending=False),
         column_config={
             "title": "Job Title",
             "company": "Company",
             "source": "Platform",
+            "salary": "Salary",
             "skill": "Extracted Skills",
             "published_at": "Posted On",
             "url": st.column_config.LinkColumn("Apply Here")
@@ -147,11 +135,43 @@ with tab2:
         height=500
     )
 
+with tab2:
+    st.subheader("🤖 ML Resume Matcher (TF-IDF & Cosine Similarity)")
+    st.markdown("Paste your skills here, and our **Machine Learning model** will calculate semantic similarity against all open jobs!")
+    user_skills = st.text_area("Your Tech Stack (e.g. Python, SQL, AWS, Docker):", "Python, SQL, Pandas, Machine Learning")
+    
+    if st.button("Run ML Similarity Search"):
+        with st.spinner("Running TF-IDF Vectorizer..."):
+            # Prepare corpus: Job Skills
+            corpus = display_df['skill'].tolist()
+            corpus = [s if s else "unknown" for s in corpus]
+            
+            # Append user skills to the end of corpus
+            corpus.append(user_skills)
+            
+            # TF-IDF
+            vectorizer = TfidfVectorizer()
+            tfidf_matrix = vectorizer.fit_transform(corpus)
+            
+            # Calculate Cosine Similarity between user_skills (last row) and all jobs
+            cosine_sim = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1]).flatten()
+            
+            # Add to dataframe
+            ml_df = display_df.copy()
+            ml_df['Match_Score'] = (cosine_sim * 100).astype(int)
+            best_matches = ml_df.sort_values('Match_Score', ascending=False).head(10)
+            
+            st.success("ML Analysis Complete! Here are your top 10 job matches based on mathematical similarity:")
+            st.dataframe(
+                best_matches[['Match_Score', 'title', 'company', 'source', 'salary', 'url']],
+                column_config={"Match_Score": st.column_config.ProgressColumn("Match %", min_value=0, max_value=100, format="%d%%"), "url": st.column_config.LinkColumn("Apply")},
+                hide_index=True, use_container_width=True
+            )
+
 with tab3:
-    st.subheader("🤖 AI Cover Letter Prompt Engineer")
+    st.subheader("📝 AI Cover Letter Prompt Engineer")
     st.markdown("Select a job below. The AI will generate a highly optimized prompt tailored to this job's skills. Copy the prompt and paste it into ChatGPT!")
     
-    # Let user select a job
     job_titles = display_df['title'].tolist()
     selected_job_title = st.selectbox("Select a Job:", job_titles)
     
@@ -176,3 +196,30 @@ Do not use overly robotic language; make it sound human, passionate, and direct.
 
         st.code(prompt, language="markdown")
         st.info("💡 Click the copy button on the top right of the code block, and paste it into ChatGPT!")
+
+with tab4:
+    st.subheader("📈 Tech Market Insights")
+    st.markdown("Real-time analytics based on the scraped job data.")
+    
+    col_chart1, col_chart2 = st.columns(2)
+    
+    with col_chart1:
+        # Top 10 Skills Bar Chart
+        top_skills = skill_counts.head(10)
+        fig_bar = px.bar(top_skills, x='Count', y='Skill', orientation='h', 
+                         title="🔥 Top 10 Most In-Demand Skills",
+                         color='Count', color_continuous_scale='Blues')
+        fig_bar.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white")
+        st.plotly_chart(fig_bar, use_container_width=True)
+        
+    with col_chart2:
+        # Source Platform Pie Chart
+        if 'source' in jobs_df.columns:
+            source_counts = jobs_df['source'].value_counts().reset_index()
+            source_counts.columns = ['Source', 'Count']
+            fig_pie = px.pie(source_counts, values='Count', names='Source', 
+                             title="📡 Job Distribution by Platform", hole=0.4)
+            fig_pie.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white")
+            st.plotly_chart(fig_pie, use_container_width=True)
+        else:
+            st.info("Source data not available yet.")
