@@ -17,6 +17,11 @@ This project acts as an automated **Data Engineering pipeline**. It fetches the 
 
 The results are stored locally in an SQLite database and visualized on a beautiful **Streamlit Dashboard** using Plotly.
 
+## 🔥 Enterprise-Grade Features Added:
+- **Autonomous CRON Data Pipeline:** Integrated with **GitHub Actions** (`daily_scrape.yml`). This repository literally runs by itself! It wakes up every day at midnight, runs the Python ETL pipeline, scrapes new jobs, and commits the updated `jobs.db` back to the repository.
+- **AI Resume Matcher:** Added an interactive "Beta" AI tool in the dashboard that simulates matching your specific tech stack to the current open jobs, providing a dynamic Match Score.
+- **Deep Analytics Dashboard:** Re-engineered the Streamlit UI using custom CSS, Plotly Treemaps, and interactive DataFrames with URL columns.
+
 ## 🚀 How to Run
 
 1. **Install Dependencies:** `pip install -r requirements.txt`
