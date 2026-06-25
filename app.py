@@ -106,7 +106,13 @@ with tab1:
 with tab2:
     st.subheader("Deep Job Filtering")
     # Filters
-    search_term = st.text_input("🔍 Search by Job Title or Company...")
+    col_search1, col_search2 = st.columns(2)
+    with col_search1:
+        search_term = st.text_input("🔍 Search by Job Title or Company...")
+    with col_search2:
+        source_options = jobs_df['source'].unique().tolist() if 'source' in jobs_df.columns else []
+        selected_sources = st.multiselect("Filter by Source:", options=source_options, default=source_options)
+        
     selected_skills = st.multiselect("Filter by Skills Required:", options=skill_counts['Skill'].tolist())
     
     # Merge and filter logic
@@ -122,12 +128,16 @@ with tab2:
         for sk in selected_skills:
             display_df = display_df[display_df['skill'].str.contains(sk, case=False, na=False)]
             
+    if selected_sources and 'source' in display_df.columns:
+        display_df = display_df[display_df['source'].isin(selected_sources)]
+            
     # Premium DataFrame Display
     st.dataframe(
-        display_df[['title', 'company', 'skill', 'published_at', 'url']].sort_values('published_at', ascending=False),
+        display_df[['title', 'company', 'source', 'skill', 'published_at', 'url']].sort_values('published_at', ascending=False),
         column_config={
             "title": "Job Title",
             "company": "Company",
+            "source": "Platform",
             "skill": "Extracted Skills",
             "published_at": "Posted On",
             "url": st.column_config.LinkColumn("Apply Here")
@@ -158,7 +168,7 @@ with tab3:
             
             st.success("Analysis Complete! Here are your top 5 job matches:")
             st.dataframe(
-                best_matches[['Match_Score', 'title', 'company', 'skill', 'url']],
+                best_matches[['Match_Score', 'title', 'company', 'source', 'url']],
                 column_config={"Match_Score": st.column_config.ProgressColumn("Match %", min_value=0, max_value=100, format="%d%%"), "url": st.column_config.LinkColumn("Apply")},
                 hide_index=True, use_container_width=True
             )
