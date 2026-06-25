@@ -148,27 +148,31 @@ with tab2:
     )
 
 with tab3:
-    st.subheader("🤖 AI Resume Matcher (Simulated)")
-    st.markdown("Paste your skills here, and the AI will score how well you match the current open jobs!")
-    user_skills = st.text_area("Your Tech Stack (e.g. Python, SQL, AWS, Docker):", "Python, SQL, Pandas")
+    st.subheader("🤖 AI Cover Letter Prompt Engineer")
+    st.markdown("Select a job below. The AI will generate a highly optimized prompt tailored to this job's skills. Copy the prompt and paste it into ChatGPT!")
     
-    if st.button("Calculate Match Scores"):
-        with st.spinner("Running similarity matrix..."):
-            user_skill_list = [s.strip().lower() for s in user_skills.split(',')]
-            
-            def calculate_score(job_skills_str):
-                if not job_skills_str: return 0
-                job_skills = [s.strip().lower() for s in job_skills_str.split(',')]
-                if not job_skills: return 0
-                matches = sum(1 for s in user_skill_list if s in job_skills)
-                return min(100, int((matches / len(job_skills)) * 100))
-                
-            display_df['Match_Score'] = display_df['skill'].apply(calculate_score)
-            best_matches = display_df.sort_values('Match_Score', ascending=False).head(5)
-            
-            st.success("Analysis Complete! Here are your top 5 job matches:")
-            st.dataframe(
-                best_matches[['Match_Score', 'title', 'company', 'source', 'url']],
-                column_config={"Match_Score": st.column_config.ProgressColumn("Match %", min_value=0, max_value=100, format="%d%%"), "url": st.column_config.LinkColumn("Apply")},
-                hide_index=True, use_container_width=True
-            )
+    # Let user select a job
+    job_titles = display_df['title'].tolist()
+    selected_job_title = st.selectbox("Select a Job:", job_titles)
+    
+    if selected_job_title:
+        job_data = display_df[display_df['title'] == selected_job_title].iloc[0]
+        company = job_data['company']
+        req_skills = job_data['skill']
+        
+        st.write("---")
+        st.markdown(f"**Target Company:** {company}")
+        st.markdown(f"**Extracted Skills:** {req_skills if req_skills else 'None detected'}")
+        
+        st.write("---")
+        st.markdown("### ✨ Your Custom ChatGPT Prompt")
+        prompt = f"""Act as an expert Career Coach and Copywriter. I am applying for the '{selected_job_title}' position at '{company}'. 
+
+Here are the core technical skills they are looking for: {req_skills}.
+
+Please write a highly professional, engaging, and concise Cover Letter for me. Focus on my ability to work autonomously in a remote environment, my strong asynchronous communication skills, and highlight how my experience aligns with the specific technologies mentioned above. 
+
+Do not use overly robotic language; make it sound human, passionate, and direct. Keep it under 300 words."""
+
+        st.code(prompt, language="markdown")
+        st.info("💡 Click the copy button on the top right of the code block, and paste it into ChatGPT!")

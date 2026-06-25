@@ -11,6 +11,24 @@
 
 ---
 
+<!-- LIVE_JOBS_START -->
+
+### 🔴 LIVE: Top 5 Remote Jobs of the Day
+
+| Job Title | Company | Salary | Apply |
+|-----------|---------|--------|-------|
+| Director of Procurement | Kardion | **Not Specified** | [Apply Here](https://remoteOK.com/remote-jobs/remote-director-of-procurement-kardion-1134002) |
+| Junior Business Analyst | Work Force Nexus | **Not Specified** | [Apply Here](https://remoteOK.com/remote-jobs/remote-junior-business-analyst-work-force-nexus-1133994) |
+| Bookkeeper | Pickle | **Not Specified** | [Apply Here](https://remoteOK.com/remote-jobs/remote-bookkeeper-pickle-1133991) |
+| Youth Mental Wellness Coach | ð Clayful | **Not Specified** | [Apply Here](https://remoteOK.com/remote-jobs/remote-youth-mental-wellness-coach-3-clayful-1134067) |
+| Monitor de Concursos RaciocÃ­nio LÃ³gico + InformÃ¡tica | VÃ­cio | **Not Specified** | [Apply Here](https://remoteOK.com/remote-jobs/remote-monitor-de-concursos-raciocinio-logico-informatica-vicio-1134051) |
+
+*(Auto-updated by GitHub Actions CRON bot 🤖)*
+
+<!-- LIVE_JOBS_END -->
+
+---
+
 ## 📖 About The Project
 
 This project acts as an automated **Data Engineering pipeline**. It fetches the latest remote job postings for Data & Software roles from public APIs, cleans the HTML job descriptions, and applies **Natural Language Processing (NLP)** techniques to extract technical skills (e.g., Python, AWS, React, Kubernetes). 

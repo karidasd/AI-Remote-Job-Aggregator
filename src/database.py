@@ -10,7 +10,7 @@ def init_db():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     
-    # Table for Jobs (added Source column)
+    # Table for Jobs
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS jobs (
             job_id TEXT PRIMARY KEY,
@@ -18,7 +18,8 @@ def init_db():
             company TEXT,
             url TEXT,
             published_at TEXT,
-            source TEXT
+            source TEXT,
+            salary TEXT
         )
     ''')
     
@@ -35,7 +36,7 @@ def init_db():
     conn.close()
     logging.info("Database initialized successfully.")
 
-def save_job_to_db(job_id, title, company, url, published_at, source, skills):
+def save_job_to_db(job_id, title, company, url, published_at, source, salary, skills):
     """Saves a job and its extracted skills to the database."""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
@@ -43,9 +44,9 @@ def save_job_to_db(job_id, title, company, url, published_at, source, skills):
     try:
         # Insert job
         cursor.execute('''
-            INSERT OR IGNORE INTO jobs (job_id, title, company, url, published_at, source)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ''', (str(job_id), title, company, url, published_at, source))
+            INSERT OR IGNORE INTO jobs (job_id, title, company, url, published_at, source, salary)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (str(job_id), title, company, url, published_at, source, salary))
         
         # If the job was actually inserted, insert its skills
         if cursor.rowcount > 0:
