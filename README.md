@@ -31,14 +31,15 @@
 
 ## 📖 About The Project
 
-This project acts as an automated **Data Engineering pipeline**. It fetches the latest remote job postings for Data & Software roles from public APIs, cleans the HTML job descriptions, and applies **Natural Language Processing (NLP)** techniques to extract technical skills (e.g., Python, AWS, React, Kubernetes). 
+This project acts as an automated, end-to-end **Data Engineering & MLOps pipeline** tailored for job seekers. It fetches the latest remote job postings from three major public APIs (**Remotive, Arbeitnow, RemoteOK**), cleans the raw HTML job descriptions, and applies **Natural Language Processing (NLP)** techniques to extract technical skills (e.g., Python, AWS, React, Kubernetes) as well as hidden salary ranges using Regular Expressions. 
 
-The results are stored locally in an SQLite database and visualized on a beautiful **Streamlit Dashboard** using Plotly.
+The results are stored in an SQLite database and visualized on a premium **Streamlit Dashboard**.
 
-## 🔥 Enterprise-Grade Features Added:
-- **Autonomous CRON Data Pipeline:** Integrated with **GitHub Actions** (`daily_scrape.yml`). This repository literally runs by itself! It wakes up every day at midnight, runs the Python ETL pipeline, scrapes new jobs, and commits the updated `jobs.db` back to the repository.
-- **AI Resume Matcher:** Added an interactive "Beta" AI tool in the dashboard that simulates matching your specific tech stack to the current open jobs, providing a dynamic Match Score.
-- **Deep Analytics Dashboard:** Re-engineered the Streamlit UI using custom CSS, Plotly Treemaps, and interactive DataFrames with URL columns.
+### 🔥 Enterprise-Grade Features:
+- **Autonomous CRON Data Pipeline:** Integrated with **GitHub Actions** (`daily_scrape.yml`). This repository is a "Living Organism". It wakes up every day at midnight, runs the Python ETL pipeline, scrapes new jobs from multiple APIs, updates the SQLite database, and commits everything back to the repository completely automatically.
+- **Dynamic "Live" README Generation:** The Python script dynamically rewrites this very `README.md` file every day to inject the "Top 5 Remote Jobs of the Day" directly on the GitHub front page.
+- **AI Prompt Engineer:** A built-in Streamlit tool that analyzes the extracted skills of a specific job and generates a customized, highly optimized ChatGPT prompt so you can instantly generate the perfect Cover Letter.
+- **Deep Analytics Dashboard:** Re-engineered Streamlit UI using custom CSS, Plotly Treemaps, interactive DataFrames with source platform indicators, and multi-skill filtering.
 
 ## 🚀 How to Run
 
@@ -124,7 +125,20 @@ If you are looking for remote jobs in Data Science, Engineering, or Software Dev
 
 ---
 
+## 👨‍💻 About the Creator
+
+Hi, I'm **Dimitris Karydas**! 👋
+
+I am an AI & Data Science Instructor and a PhD Candidate passionate about building end-to-end data pipelines, MLOps systems, and AI-driven applications. 
+
+This repository was built not just as a portfolio project, but as a genuine tool to help tech professionals find remote work while demonstrating how modern Data Engineering (ETL, SQLite, NLP, Streamlit, GitHub Actions) can solve real-world problems autonomously.
+
+Feel free to connect with me or check out my other projects:
+- 🌐 **Portfolio Website:** [karidasd.github.io](https://karidasd.github.io/)
+- 💼 **LinkedIn:** [Dimitris Karydas](https://www.linkedin.com/in/karidasd) (Feel free to connect!)
+- 🐙 **GitHub:** [@karidasd](https://github.com/karidasd)
+
 <div align="center">
-  <b>Built by <a href="https://karidasd.github.io/">Karydas</a></b><br>
-  <i>AI & Data Science Instructor / PhD Candidate</i>
+  <br>
+  <i>Designed and Built with passion.</i>
 </div>
